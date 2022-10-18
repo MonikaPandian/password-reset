@@ -13,7 +13,7 @@ const SignUp = () => {
             email: email, 
             password: password                              
         };    
-        fetch("https://customer-relation-manage-app.herokuapp.com/users/signup", {
+        fetch("https://password-reset-110.herokuapp.com/users/signup", {
             method: "POST",
             body: JSON.stringify(newUser),
             headers: {
@@ -24,10 +24,7 @@ const SignUp = () => {
             .then((data) => {
                 if(data.message === "Username already taken"){
                     window.alert("Username already taken")
-                }
-                if(data.message === "Password pattern does not match"){
-                    window.alert("Password pattern does not match. Password should contain atleast one uppercase, lowercase, symbol and number")
-                }
+                }               
                 if(data.acknowledged === true ){
                     window.alert("Account created Successfully!!!")
                     navigate("/forgot-password")         

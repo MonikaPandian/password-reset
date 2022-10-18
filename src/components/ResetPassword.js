@@ -23,7 +23,7 @@ const ResetPassword = () => {
             password : newPassword                      
         };    
         console.log(updatePassword)
-        fetch(`https://customer-relation-manage-app.herokuapp.com/users/reset-password/${id}/${token}`, {
+        fetch(`https://password-reset-110.herokuapp.com/users/reset-password/${id}/${token}`, {
             method: "POST",
             body: JSON.stringify(updatePassword),
             headers: {
