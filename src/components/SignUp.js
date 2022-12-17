@@ -13,7 +13,7 @@ const SignUp = () => {
             email: email, 
             password: password                              
         };    
-        fetch("https://password-reset-110.herokuapp.com/users/signup", {
+        fetch("https://password-reset-backend-iota.vercel.app/users/signup", {
             method: "POST",
             body: JSON.stringify(newUser),
             headers: {
